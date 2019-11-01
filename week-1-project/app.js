@@ -81,18 +81,18 @@ const object = {
       this.NaNyStrings.length === 0 &&
       this.numberyStrings.length !== 0
     ) {
-      function checkPozitive(num) {
+      function checkPositive(num) {
         return num > 0;
       }
-      return this.numberyStrings.filter(checkPozitive);
+      return this.numberyStrings.filter(checkPositive);
     } else if (
       this.NaNyStrings.length !== 0 &&
       this.numberyStrings.length !== 0
     ) {
-      function checkPozitive(num) {
+      function checkPositive(num) {
         return num > 0 || num === "";
       }
-      return this.numberyStrings.filter(checkPozitive);
+      return this.numberyStrings.filter(checkPositive);
     }
   },
   zeroStrings: function() {
