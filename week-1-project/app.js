@@ -112,9 +112,14 @@ const object = {
     // write me!
     return this.numberyStrings.map(str => Number(str));
   },
+<<<<<<< HEAD
   NaNyAsNumbers: function() {
     // write me!
     return this.NaNyStrings.map(str => Number(str));
+=======
+  sumOfNumbery: function () {
+    // write me! (using a Array.prototype.reduce())
+>>>>>>> e8dd2760382752acce1b0a0a6fccff6087b18294
   },
   sumOfNumbery: function() {
     // write me!

@@ -8,6 +8,9 @@
   - and users can access & modify that data
 */
 
+
+
+
 const object = {
   entries: {},
   isPrimitive: function(value) {
@@ -31,6 +34,7 @@ const object = {
       // write me! (using this.isPrimitive)
       return new TypeError("addEntry: value should be a primitive");
     }
+<<<<<<< HEAD
     if (this.hasKey(this.entries, key)) {
       // write me! (using this.hasKey)
       return new Error(`addEntry: key "${key}" already exists`);
@@ -38,18 +42,34 @@ const object = {
       this.entries[key] = value;
       return true;
     } // write me!
+=======
+    if (null) { // write me! (using this.hasKey)
+      return new Error(`addEntry: key "${key}" already exists`);
+    }
+
+    // write me!
+>>>>>>> e8dd2760382752acce1b0a0a6fccff6087b18294
   },
   removeEntry: function(key) {
     if (typeof key !== "string") {
       // write me!
       return new TypeError("removeEntry: key should be a string");
     }
+<<<<<<< HEAD
     if (!this.hasKey(this.entries, key)) {
       // write me! (using this.hasKey)
       return new ReferenceError(
         `removeEntry: no property "${key}" in this.entries`
       );
     }
+=======
+    if (null) { // write me! (using this.hasKey)
+      return new ReferenceError(`removeEntry: no property "${key}" in this.entries`);
+    }
+
+    delete this.entries[key]
+    return true
+>>>>>>> e8dd2760382752acce1b0a0a6fccff6087b18294
     // write me!
   },
   updateEntry: function(key, value) {
@@ -61,6 +81,7 @@ const object = {
       // write me! (using this.isPrimitive)
       return new TypeError("updateEntry: value should be a primitive");
     }
+<<<<<<< HEAD
     if (!this.hasKey(this.entries, key)) {
       // write me! (using this.hasKey)
       return new ReferenceError(
@@ -69,6 +90,10 @@ const object = {
     } else {
       this.entries[key] = value;
       return true;
+=======
+    if (null) { // write me! (using this.hasKey)
+      return new ReferenceError(`updateEntry: no property "${key}" in this.entries`);
+>>>>>>> e8dd2760382752acce1b0a0a6fccff6087b18294
     }
   },
   readAll: function() {
@@ -79,11 +104,16 @@ const object = {
       // write me!
       return new TypeError("findByKey: key should be a string");
     }
+<<<<<<< HEAD
     if (null) {
       // write me! (using this.hasKey)
       return new ReferenceError(
         `findByKey: no property "${key}" in this.entries`
       );
+=======
+    if (null) { // write me! (using this.hasKey)
+      return new ReferenceError(`findByKey: no property "${key}" in this.entries`);
+>>>>>>> e8dd2760382752acce1b0a0a6fccff6087b18294
     }
 
     // write me!
