@@ -92,8 +92,16 @@ try {
   ];
   function exercise3(arg) {
     const result = mightReturnAnError(arg);
-
     // write me!
+    if (result instanceof Error) {
+      let output = new Object();
+      output[typeof arg] = result.message;
+      return output;
+    } else {
+      let output = new Object();
+      output[typeof arg] = arg;
+      return output;
+    }
   }
   exercise3.display = true;
   evaluate(exercise3, exercise3Tests);
@@ -111,8 +119,16 @@ try {
   ];
   function exercise4(arg) {
     const result = mightReturnAnError(arg);
-
     // write me!
+    if (result instanceof Error) {
+      let output = [];
+      output[0] = result.message;
+      return output;
+    } else {
+      let output = [];
+      output = [null, arg];
+      return output;
+    }
   }
   exercise4.display = true;
   evaluate(exercise4, exercise4Tests);
