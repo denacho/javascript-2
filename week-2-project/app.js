@@ -73,13 +73,16 @@ const object = {
   },
   readAll: function() {
     // write me!
+    var readAll = { ...this.entries };
+    var copy = Object.assign({}, readAll);
+    return copy;
   },
   findByKey: function(key) {
-    if (null) {
+    if (typeof key !== "string") {
       // write me!
       return new TypeError("findByKey: key should be a string");
     }
-    if (null) {
+    if (!this.hasKey(this.entries, key)) {
       // write me! (using this.hasKey)
       return new ReferenceError(
         `findByKey: no property "${key}" in this.entries`
@@ -89,17 +92,19 @@ const object = {
     // write me!
   },
   findByValue: function(value) {
-    if (null) {
+    if (!this.isPrimitive(value)) {
       // write me! (using this.isPrimitive)
-      return new TypeError("findByValue: value should be a primitive");
+      if (typeof value !== "isPrimitive")
+        return new TypeError("findByValue: value should be a primitive");
     }
-    if (null) {
+    if (typeof value !== "this.hasValue") {
       // write me! (using this.hasValue)
       return new ReferenceError(
         `findByValue: no entry with value (${typeof value}, ${value})`
       );
     }
-
+    let newKey = Object.keys(obj).find(keyOfValue => obj[keyOfValue] === value);
+    newObj[newKey] = value;
     // write me! (this one is a bit trickier)
   }
 };
